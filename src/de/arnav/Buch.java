@@ -1,12 +1,14 @@
 package de.arnav;
 
 public class Buch {
+    protected String titel;
     protected String autor;
     protected int seitenZahl;
     protected String genre;
     protected String[] content;
 
-    public Buch(String autor, int seitenZahl, String genre, String[] content) {
+    public Buch(String titel, String autor, int seitenZahl, String genre, String[] content) {
+        this.titel = titel;
         this.autor = autor;
         this.seitenZahl = seitenZahl;
         this.genre = genre;
@@ -16,6 +18,10 @@ public class Buch {
     public String lesen(int seitenZahl) {
         this.seitenZahl = seitenZahl;
         return this.content[seitenZahl];
+    }
+
+    public String getTitel() {
+        return this.titel;
     }
 
     public String getAutor() {
