@@ -1,5 +1,8 @@
 package de.arnav;
 
+import javax.swing.*;
+import java.awt.*;
+
 public class MainProgram {
 
     public static Buch[] buecher = new Buch[] {
@@ -9,6 +12,21 @@ public class MainProgram {
     };
 
     public static void main(String[] args) {
+        new MainProgram();
+    }
+
+    public MainProgram() {
+        MyWindow window = new MyWindow(this);
+        JFrame frame = new JFrame("My Window");
+        frame.setContentPane(window.getContentPane());
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setPreferredSize(new Dimension(500, 500));
+        frame.pack();
+        frame.setVisible(true);
+
+    }
+
+    private void printBooks() {
         for (int i = 0; i < buecher.length; i++) {
             System.out.println(buecher[i].getTitel());
             System.out.println(buecher[i].getAutor());
@@ -18,6 +36,5 @@ public class MainProgram {
                 System.out.println();
             }
         }
-
     }
 }
