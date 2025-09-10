@@ -1,4 +1,4 @@
-package de.arnav;
+package de.arnav.model;
 
 public class Thriller extends Buch {
 

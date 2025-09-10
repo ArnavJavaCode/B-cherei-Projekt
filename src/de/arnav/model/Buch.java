@@ -1,4 +1,4 @@
-package de.arnav;
+package de.arnav.model;
 
 public class Buch {
     protected String titel;
@@ -13,11 +13,6 @@ public class Buch {
         this.seitenZahl = seitenZahl;
         this.genre = genre;
         this.content = content;
-    }
-
-    public String lesen(int seitenZahl) {
-        this.seitenZahl = seitenZahl;
-        return this.content[seitenZahl];
     }
 
     public String getTitel() {
