@@ -1,6 +1,6 @@
 package de.arnav.model;
 
-public class Buch {
+public abstract class Buch {
     protected String titel;
     protected String autor;
     protected int seitenZahl;
